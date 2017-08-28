@@ -1,0 +1,18 @@
+name: pygments
+version: 0.1.0
+description: Run pygments on code snippets in your HTML files
+author: Ryan Gonzalez
+dependencies:
+  barback: any
+  html: any
+  html_unescape: any
+  source_maps: any
+  source_span: any
+transformers:
+  - pygments:
+      classes:
+        - "pre[class|='language']":
+            re: "language-(.*)"
+        - "pre[class=dart]":
+            lang: dart
+            unescape: false
