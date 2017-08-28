@@ -1,13 +1,16 @@
 name: pygments
 version: 0.1.0
-description: Run pygments on code snippets in your HTML files
-author: Ryan Gonzalez
+description: Highlight source code snippets in your HTML files using pygments
+author: Ryan Gonzalez <rymg19@gmail.com>
+homepage: https://github.com/kirbyfan64/pygments-dart
 dependencies:
-  barback: any
-  html: any
-  html_unescape: any
-  source_maps: any
-  source_span: any
+  barback: ^0.15.2+2
+  html: ^0.13.2
+  html_unescape: ^0.1.5
+  source_maps: ^0.10.4
+  source_span: ^1.4.0
+environment:
+  sdk: ">=1.8.0 <2.0.0"
 transformers:
   - pygments:
       classes:
