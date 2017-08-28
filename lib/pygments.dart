@@ -68,7 +68,6 @@ class PygmentsTransformer extends Transformer {
         }
 
         if (doUnescape) {
-          print(code);
           code = unescape.convert(code);
         }
 
