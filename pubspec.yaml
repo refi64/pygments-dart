@@ -1,5 +1,5 @@
 name: pygments
-version: 0.1.1
+version: 0.1.2
 description: Highlight source code snippets in your HTML files using pygments
 author: Ryan Gonzalez <rymg19@gmail.com>
 homepage: https://github.com/kirbyfan64/pygments-dart
