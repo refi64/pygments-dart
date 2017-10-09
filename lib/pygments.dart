@@ -71,7 +71,8 @@ class PygmentsTransformer extends Transformer {
           code = unescape.convert(code);
         }
 
-        var proc = await Process.start('pygmentize', ['-l', lang, '-f', 'html']);
+        var proc = await Process.start('pygmentize', ['-l', lang ?? 'text', '-f',
+                                                      'html']);
         proc.stdin.write(code);
         await proc.stdin.flush();
         await proc.stdin.close();
