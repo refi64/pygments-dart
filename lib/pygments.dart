@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:barback/barback.dart';
@@ -76,9 +77,7 @@ class PygmentsTransformer extends Transformer {
         proc.stdin.write(code);
         await proc.stdin.flush();
         await proc.stdin.close();
-        var formattedCode = await proc.stdout
-                                    .map((bytes) => new String.fromCharCodes(bytes))
-                                    .join();
+        var formattedCode = await proc.stdout.map(UTF8.decode).join();
 
         rewriter.edit(match.sourceSpan.start.offset, match.endSourceSpan.end.offset,
                       formattedCode);
